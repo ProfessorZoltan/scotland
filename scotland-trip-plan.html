@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scotland Trip Plan</title>
+<style>
+:root{
+  --bg:#f7f5f0; --card:#ffffff; --ink:#1f2328; --muted:#5b6370; --line:#e3dfd6;
+  --accent:#1f4e79; --accent-soft:#e6eef6; --warn:#8a3b12; --warn-soft:#fbeee6;
+  --travel:#6b4f8a; --easy:#2f6b3a; --big:#8a3b12;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15181c; --card:#1d2126; --ink:#e8eaed; --muted:#a3abb6; --line:#2e343b;
+    --accent:#8fb8e0; --accent-soft:#1f2d3b; --warn:#f0a77f; --warn-soft:#3a2418;
+    --travel:#c3a8e0; --easy:#8fd19b; --big:#f0a77f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15181c; --card:#1d2126; --ink:#e8eaed; --muted:#a3abb6; --line:#2e343b;
+  --accent:#8fb8e0; --accent-soft:#1f2d3b; --warn:#f0a77f; --warn-soft:#3a2418;
+  --travel:#c3a8e0; --easy:#8fd19b; --big:#f0a77f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.wrap{max-width:880px;margin:0 auto;padding:24px 16px 64px}
+header{border-bottom:3px solid var(--accent);padding-bottom:16px;margin-bottom:8px}
+h1{font-family:Georgia,"Times New Roman",serif;font-size:2rem;line-height:1.2;margin:0 0 6px}
+.sub{color:var(--muted);margin:0}
+nav{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 8px}
+nav a{font-size:.85rem;text-decoration:none;color:var(--accent);background:var(--accent-soft);
+  padding:4px 10px;border-radius:999px}
+section{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 18px;margin:18px 0}
+h2{font-family:Georgia,"Times New Roman",serif;font-size:1.35rem;margin:0 0 10px;color:var(--accent)}
+h3{font-size:1rem;margin:18px 0 6px}
+p{margin:0 0 10px}
+ul,ol{margin:0 0 10px;padding-left:22px}
+li{margin:3px 0}
+a{color:var(--accent)}
+.lead{font-size:1.05rem}
+.callout{background:var(--warn-soft);border-left:4px solid var(--warn);padding:10px 14px;border-radius:6px;margin:12px 0}
+.callout strong{color:var(--warn)}
+.tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:10px 0;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.92rem;min-width:560px}
+th,td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--line)}
+th{background:var(--accent-soft);font-weight:600;white-space:nowrap}
+tr:last-child td{border-bottom:none}
+td.src{font-size:.82rem;color:var(--muted);min-width:110px}
+td.nowrap{white-space:nowrap}
+.tag{display:inline-block;font-size:.75rem;font-weight:600;padding:2px 8px;border-radius:999px;border:1px solid currentColor;white-space:nowrap}
+.t-travel{color:var(--travel)} .t-easy{color:var(--easy)} .t-big{color:var(--big)} .t-mod{color:var(--accent)}
+.check{list-style:none;padding-left:0}
+.check li{display:flex;gap:10px;align-items:flex-start;padding:6px 0;border-bottom:1px dashed var(--line)}
+.check li:last-child{border-bottom:none}
+.check input{margin-top:5px;width:18px;height:18px;flex:none}
+.muted{color:var(--muted);font-size:.88rem}
+footer{color:var(--muted);font-size:.82rem;margin-top:24px}
+@media (max-width:600px){h1{font-size:1.6rem} section{padding:16px 14px}}
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  nav{display:none}
+  section{border:none;padding:0;margin:14px 0;page-break-inside:auto}
+  .tbl{overflow:visible;border:none}
+  table{min-width:0}
+  th{background:#eee}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Scotland Trip Plan: Bill &amp; Luke</h1>
+  <p class="sub">Oct 16 – Nov 1, 2026 · Framework as of Oct 5, 2026</p>
+  <nav>
+    <a href="#glance">At a glance</a><a href="#route">Route</a><a href="#arrival">Arrival day</a><a href="#lastday">Last day</a>
+    <a href="#days">Day by day</a><a href="#transport">Getting around</a><a href="#health">Bill's health</a>
+    <a href="#october">Late October</a><a href="#checklist">Checklist</a><a href="#questions">Questions</a>
+  </nav>
+</header>
+
+<section id="glance">
+  <h2>At a glance</h2>
+  <p class="lead">A clockwise loop with six Scottish bases: trains for the cities (Oct 17–22), then one rental car from Inverness for the Highlands (Oct 24–Nov 1). Every town on Luke's list is covered.</p>
+  <ul>
+    <li><strong>Travelers:</strong> Bill (79) and Luke (49). Luke does all the driving.</li>
+    <li><strong>Dates:</strong> Land at London Heathrow around 7 am on Oct 16, then train to York for the night. Scotland Oct 17–31 (14 nights). Fly Glasgow → Heathrow Oct 31, sleep near Heathrow, fly home from Heathrow Nov 1.</li>
+    <li><strong>Budget:</strong> about $100 (roughly £75) a night per room, staying in towns rather than Edinburgh or Glasgow.</li>
+    <li><strong>Pace rule:</strong> no more than one long travel day in a row, at least two nights per base where possible, and one unscheduled rest day each week.</li>
+  </ul>
+  <div class="callout"><strong>Time pressure:</strong> the trip starts in 11 days. Lodging, the rental car, travel insurance and the UK entry permit (ETA) need booking this week.</div>
+</section>
+
+<section id="route">
+  <h2>Route and bases</h2>
+  <p>Eight places to sleep: York, six Scottish bases, and a Heathrow hotel the last night. Day trips cover the towns that don't need their own night.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Nights</th><th>Count</th><th>Stay in</th><th>Covers</th><th>How they get there</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td class="nowrap">Oct 16</td><td>1</td><td>York, England</td><td>Overnight stop</td><td>Land Heathrow 7 am; to King's Cross (about 1 hr); LNER train to York, about 2 hr</td><td class="src"><a href="https://www.sme.thetrainline.com/train-times/london-kings-cross-to-york">Trainline</a></td></tr>
+      <tr><td class="nowrap">Oct 17–20</td><td>4</td><td>Stirling</td><td>Stirling, Edinburgh, Glasgow, Dumbarton (all by train)</td><td>Train York → Edinburgh, about 2 hr 25 min; then Edinburgh → Stirling, about 50 min (approx.)</td><td class="src"><a href="https://live-departures.info/rail/timetable/York/Edinburgh/">York–Edinburgh timetable</a></td></tr>
+      <tr><td class="nowrap">Oct 21–22</td><td>2</td><td>Stonehaven (seaside town about 20 min south of Aberdeen, usually cheaper)</td><td>Aberdeen</td><td>Direct train on the Stirling → Aberdeen line, about 2 hr 14 min; confirm it stops at Stonehaven</td><td class="src"><a href="https://live-departures.info/rail/timetable/Stirling/Aberdeen/">Stirling–Aberdeen timetable</a></td></tr>
+      <tr><td class="nowrap">Oct 23–25</td><td>3</td><td>Inverness (or Nairn, quieter and cheaper)</td><td>Inverness, Cairngorms, Loch Ness</td><td>Direct train Aberdeen → Inverness, about 2 hr 17 min; pick up car next morning</td><td class="src"><a href="https://scotrail.co.uk/train-times/aberdeen-to-inverness">ScotRail</a></td></tr>
+      <tr><td class="nowrap">Oct 26–27</td><td>2</td><td>Isle of Skye: Broadford or Portree (Kyle of Lochalsh may be cheaper)</td><td>Isle of Skye</td><td>Drive about 2.5 hr (approx.)</td><td class="src">—</td></tr>
+      <tr><td class="nowrap">Oct 28–29</td><td>2</td><td>Fort William</td><td>Fort William, Glenfinnan</td><td>Drive about 2.5 hr (approx.)</td><td class="src">—</td></tr>
+      <tr><td class="nowrap">Oct 30</td><td>1</td><td>Oban</td><td>Oban (Glencoe on the drive there)</td><td>Drive Fort William → Glencoe → Oban, about 1.5 hr plus stops (approx.)</td><td class="src">—</td></tr>
+      <tr><td class="nowrap">Oct 31</td><td>1</td><td>Heathrow airport hotel</td><td>—</td><td>Drive Oban → Glasgow Airport, about 2.5–3 hr (approx.); return car; British Airways flight to Heathrow, about 1.5 hr</td><td class="src"><a href="https://www.flightsfrom.com/GLA-LHR">flightsfrom.com</a></td></tr>
+      <tr><td class="nowrap">Nov 1</td><td>—</td><td>Fly home from Heathrow</td><td>—</td><td>Hotel to terminal</td><td class="src">—</td></tr>
+    </tbody>
+  </table></div>
+  <div class="callout"><strong>Getting back to Heathrow:</strong> fly from Glasgow on Oct 31 rather than taking the train. The flight is about 1.5 hours; the train to London is 4.5–5 hours plus another hour across London to Heathrow.</div>
+</section>
+
+<section id="arrival">
+  <h2>Arrival day: Heathrow to York</h2>
+  <p>After an overnight flight, aim to be on a train to York by about 11 am and in York by about 1 pm. Leave slack for a late landing or a slow passport line.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Step</th><th>Time (approx.)</th><th>Tip</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Land at Heathrow</td><td class="nowrap">7:00 am</td><td>US passport holders aged 12+ can use the automated eGates; no registration needed</td><td class="src"><a href="https://onemileatatime.com/uk-e-gates-expanded-countries/">One Mile at a Time</a></td></tr>
+      <tr><td>Passport control and bags</td><td class="nowrap">7:00–8:30 am</td><td>ETA must already be approved before boarding in the US</td><td class="src"><a href="https://www.gov.uk/eta">GOV.UK ETA</a></td></tr>
+      <tr><td>Heathrow → King's Cross by pre-booked car <strong>(recommended for Bill)</strong></td><td class="nowrap">30–60 min</td><td>Door to door; no stairs or crowded rush-hour Tube with luggage. Black cab runs about £56–£105.</td><td class="src"><a href="https://www.heathrow.com/transport-and-directions/by-rail-or-train/kings-cross">Heathrow</a></td></tr>
+      <tr><td>Or Heathrow → King's Cross by Piccadilly line</td><td class="nowrap">About 1 hr</td><td>Direct and cheapest; step-free at Heathrow and King's Cross, but busy at rush hour</td><td class="src"><a href="https://www.heathrow.com/transport-and-directions/by-rail-or-train/kings-cross">Heathrow</a></td></tr>
+      <tr><td>King's Cross → York (LNER)</td><td class="nowrap">About 2 hr</td><td>Trains roughly every 30 min. Buy a flexible ticket, not a fixed-time Advance fare, in case the flight runs late. Book Passenger Assist.</td><td class="src"><a href="https://www.sme.thetrainline.com/train-times/london-kings-cross-to-york">Trainline</a></td></tr>
+      <tr><td>Check in at York</td><td class="nowrap">About 1 pm</td><td>Pick a hotel near York station; ask for early check-in or to leave bags</td><td class="src">—</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="lastday">
+  <h2>Last day: Oban to Heathrow</h2>
+  <p>On Sat Oct 31, drive to Glasgow Airport, return the car and take an afternoon flight to Heathrow. They sleep near Heathrow so Nov 1 starts with a short hop to the terminal.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Step</th><th>Time (approx.)</th><th>Tip</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Leave Oban</td><td class="nowrap">9:00 am Sat Oct 31</td><td>Daylight drive via Tyndrum and Loch Lomond; Dumbarton Rock comes into view near the end</td><td class="src">—</td></tr>
+      <tr><td>Return car at Glasgow Airport</td><td class="nowrap">About 12:00 pm</td><td>Allow 30 min to return the car and reach the terminal</td><td class="src">—</td></tr>
+      <tr><td>Fly Glasgow → Heathrow (British Airways)</td><td class="nowrap">Afternoon, about 1.5 hr</td><td>British Airways flies the route 7–10 times a day. Book one leaving around 2–3 pm for slack, on a fare that includes a checked bag.</td><td class="src"><a href="https://www.flightsfrom.com/GLA-LHR">flightsfrom.com</a></td></tr>
+      <tr><td>Sleep at a Heathrow hotel</td><td class="nowrap">Evening</td><td>Pick one linked to their departure terminal by walkway or free shuttle. Expect more than $100 for this night.</td><td class="src">—</td></tr>
+      <tr><td>Fly home</td><td class="nowrap">Sun Nov 1</td><td>Be at the terminal 3 hours before departure</td><td class="src">—</td></tr>
+      <tr><td>Fallback only: train</td><td>4.5–5 hr Glasgow Central → London Euston, plus about 1 hr to Heathrow</td><td>Too long a day for Bill unless flights are disrupted</td><td class="src"><a href="https://www.business.thetrainline.com/train-times/glasgow-to-london-euston">Trainline</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="days">
+  <h2>Day by day</h2>
+  <p>One main activity per day, done in the morning, with afternoons kept light. "Rest option" means the day can be dropped entirely if Bill is tired.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Date</th><th>Sleep in</th><th>Plan</th><th>Effort</th></tr></thead>
+    <tbody>
+      <tr><td class="nowrap">Fri Oct 16</td><td>York</td><td>Land Heathrow 7 am. Car or train to King's Cross, then LNER to York, arriving early afternoon. Nap, early dinner, early night. York Minster only if energy allows.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Sat Oct 17</td><td>Stirling</td><td>Train to Edinburgh, change for Stirling. Check in, quiet dinner.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Sun Oct 18</td><td>Stirling</td><td>Stirling Castle in the morning (taxi up the hill). Afternoon off.</td><td><span class="tag t-mod">Moderate</span></td></tr>
+      <tr><td class="nowrap">Mon Oct 19</td><td>Stirling</td><td>Day trip to Edinburgh by train: Castle, then walk <em>down</em> the Royal Mile, taxi back to the station.</td><td><span class="tag t-big">Big day</span></td></tr>
+      <tr><td class="nowrap">Tue Oct 20</td><td>Stirling</td><td>Day trip to Glasgow (Cathedral, Kelvingrove museum) and Dumbarton Castle, viewed from the base.</td><td><span class="tag t-mod">Moderate · rest option</span></td></tr>
+      <tr><td class="nowrap">Wed Oct 21</td><td>Stonehaven</td><td>Train north. Afternoon: Dunnottar Castle seen from the clifftop path.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Thu Oct 22</td><td>Stonehaven</td><td>Short train into Aberdeen: harbour, Maritime Museum, Old Aberdeen.</td><td><span class="tag t-easy">Easy</span></td></tr>
+      <tr><td class="nowrap">Fri Oct 23</td><td>Inverness</td><td>Train to Inverness. Evening walk along the River Ness.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Sat Oct 24</td><td>Inverness</td><td>Pick up rental car. Loch Ness and Urquhart Castle; Culloden Battlefield.</td><td><span class="tag t-mod">Moderate</span></td></tr>
+      <tr><td class="nowrap">Sun Oct 25</td><td>Inverness</td><td>Clocks go back tonight. Cairngorms scenic drive: Aviemore, Loch Morlich.</td><td><span class="tag t-easy">Easy · rest option</span></td></tr>
+      <tr><td class="nowrap">Mon Oct 26</td><td>Skye</td><td>Drive to Skye, stopping at Eilean Donan Castle on the way.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Tue Oct 27</td><td>Skye</td><td>Driving loop: Portree, then roadside viewpoints on the Trotternish peninsula. No hiking.</td><td><span class="tag t-easy">Easy</span></td></tr>
+      <tr><td class="nowrap">Wed Oct 28</td><td>Fort William</td><td>Drive to Fort William over the Skye Bridge.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Thu Oct 29</td><td>Fort William</td><td>Glenfinnan Viaduct and monument (about 30 min west). Optional: ride the regular ScotRail train over the viaduct.</td><td><span class="tag t-easy">Easy</span></td></tr>
+      <tr><td class="nowrap">Fri Oct 30</td><td>Oban</td><td>Drive to Oban through Glencoe, with roadside stops (no hiking). Afternoon: harbour, seafood, Oban Distillery tour.</td><td><span class="tag t-easy">Easy</span></td></tr>
+      <tr><td class="nowrap">Sat Oct 31</td><td>Heathrow airport hotel</td><td>Leave Oban about 9 am. Drive via Loch Lomond to Glasgow Airport, return car, afternoon flight to Heathrow. Early night.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+      <tr><td class="nowrap">Sun Nov 1</td><td>—</td><td>Hotel to terminal; arrive 3 hours before the flight home.</td><td><span class="tag t-travel">Travel day</span></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="transport">
+  <h2>Getting around</h2>
+  <p>Use one rental car, not three: pick it up in Inverness on Oct 24 and drop it at Glasgow Airport on Oct 31. Trains cover Edinburgh, Glasgow and Dumbarton easily from Stirling, and the Inverness car carries them to Oban.</p>
+  <h3>Trains (Oct 16–23)</h3>
+  <ul>
+    <li>Every train leg is direct except the Edinburgh change on Oct 17.</li>
+    <li>Book free Passenger Assist for Bill: staff help with bags, boarding and seating. Book at least 2 hours before travel.</li>
+    <li>Advance tickets on the Scottish routes start around £11–£15 one way. A Two Together Railcard (two named adults travelling together) cuts fares by about a third.</li>
+  </ul>
+  <h3>Car (Oct 24 – Nov 1)</h3>
+  <ul>
+    <li>Luke should be the only driver. Many UK rental companies set an upper age limit, often 75 or 79, or ask older drivers for a doctor's note.</li>
+    <li>Book an <strong>automatic</strong>. UK rentals default to manual (stick shift).</li>
+    <li>Pick a small car. Skye has single-track roads with passing places.</li>
+    <li>The main driver needs a credit card in his own name. A one-way drop fee will apply.</li>
+  </ul>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>Detail</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Passenger Assist</td><td>Free; book 2+ hours ahead (before 10 pm for early trains)</td><td class="src"><a href="https://www.scotrail.co.uk/train-times/inverness-to-aberdeen">ScotRail</a></td></tr>
+      <tr><td>Rental age limits</td><td>Some companies cap at 75 or 79</td><td class="src"><a href="https://eathealthy365.com/rules-for-a-car-rental-in-scotland/">Car rental rules</a></td></tr>
+      <tr><td>Doctor's note over 75</td><td>Some agencies require one</td><td class="src"><a href="https://www.ca.kayak.com/Scottish-Highlands-Car-Rentals.f2001210.crr.html">KAYAK</a></td></tr>
+      <tr><td>Train fares</td><td>From about £11.20 (Aberdeen–Inverness), £15.30 (Stirling–Aberdeen) booked ahead</td><td class="src"><a href="https://scotrail.co.uk/train-times/aberdeen-to-inverness">ScotRail</a></td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="health">
+  <h2>Bill's health and safety</h2>
+  <div class="callout"><strong>Most important:</strong> travel medical insurance for both of them, including medical evacuation. Medicare generally does not pay for care outside the US.</div>
+  <h3>Before leaving</h3>
+  <ul>
+    <li>Pack all medications in carry-on, in original containers, plus an extra week's supply.</li>
+    <li>On the flight: walk the aisle every hour or two and drink water.</li>
+  </ul>
+  <h3>On the trip</h3>
+  <ul>
+    <li>Emergency number is <strong>999</strong> (112 also works). For urgent but not emergency advice, call NHS <strong>111</strong>.</li>
+    <li>Note the nearest hospital at each base when checking in.</li>
+    <li>Cold wind and hills add strain. Dress in layers and take taxis up steep streets.</li>
+    <li>Ask every hotel for a ground-floor room or a lift (elevator). Many small B&amp;Bs have only stairs.</li>
+  </ul>
+  <h3>Steep spots to see from below or skip</h3>
+  <ul>
+    <li>Dumbarton Castle: hundreds of steep steps up the rock.</li>
+    <li>Wallace Monument near Stirling: a narrow spiral staircase to the top.</li>
+    <li>Dunnottar Castle: steep steps down to the castle and back up; the clifftop view is the best part anyway.</li>
+    <li>Edinburgh and Stirling castles: steep, cobbled approaches. Taxi to the gate and ask about mobility help.</li>
+    <li>McCaig's Tower in Oban: steep climb from town; drive up instead.</li>
+  </ul>
+</section>
+
+<section id="october">
+  <h2>Late-October realities</h2>
+  <p>Short days are the biggest constraint: plan every drive to finish before dark, roughly 4:30 pm after the clocks change.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Item</th><th>What it means for the trip</th><th>Source</th></tr></thead>
+    <tbody>
+      <tr><td>Clocks go back Sun Oct 25</td><td>Sunset jumps about an hour earlier; Highlands sunset around 4:30–4:45 pm for the Skye and Fort William legs (approx.)</td><td class="src">—</td></tr>
+      <tr><td>Jacobite steam train ends Oct 23</td><td>It won't be running when they reach Fort William on Oct 28. The regular ScotRail train to Mallaig crosses the same Glenfinnan Viaduct year-round, or view it from the roadside.</td><td class="src"><a href="https://westcoastrailways.co.uk">West Coast Railways</a></td></tr>
+      <tr><td>Seasonal hours</td><td>Many attractions shorten hours or close for winter around Nov 1. Check each one the week before.</td><td class="src">—</td></tr>
+      <tr><td>Weather</td><td>Expect cool (roughly 40s–50s °F), wet and windy days. Pack waterproof jackets and good walking shoes.</td><td class="src">—</td></tr>
+      <tr><td>Off-season upside</td><td>Fewer crowds and lower lodging prices, which helps the $100-a-night target.</td><td class="src">—</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="checklist">
+  <h2>Before-departure checklist</h2>
+  <p>The first two items can stop the trip if missed, so do them this week. <span class="muted">(Tick boxes reset when the page reloads.)</span></p>
+  <ul class="check">
+    <li><input type="checkbox" aria-label="done"><span><strong>UK ETA for both Bill and Luke.</strong> £20 each, only at <a href="https://www.gov.uk/eta">gov.uk/eta</a> or the official UK ETA app. Airlines will refuse boarding without it. Avoid lookalike sites that charge more.</span></li>
+    <li><input type="checkbox" aria-label="done"><span><strong>Travel medical insurance</strong> for both travelers, including medical evacuation.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Book the Oct 31 Glasgow → Heathrow flight (early afternoon, checked bag included). Book a Heathrow pickup car and a flexible King's Cross → York train ticket.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Book 8 lodgings with free cancellation: York, Stirling, Stonehaven, Inverness, Skye, Fort William, Oban, and a Heathrow airport hotel. Ask for twin beds and ground floor or a lift.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Book the rental car: automatic, small, Luke as driver, Inverness pickup Oct 24, drop at Glasgow Airport Oct 31.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Buy a Two Together Railcard and book train tickets in advance.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Book Passenger Assist for each train leg.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Set up phone service abroad and download offline maps (signal is patchy on Skye).</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Tell banks about the trip; bring a credit card with no foreign transaction fees.</span></li>
+    <li><input type="checkbox" aria-label="done"><span>Share this plan and lodging addresses with family at home.</span></li>
+  </ul>
+</section>
+
+<section id="questions">
+  <h2>Open questions for Luke</h2>
+  <ol>
+    <li>Arrival is Heathrow around 7 am on Oct 16. Which terminal and flight number?</li>
+    <li>What time does the Nov 1 flight leave Heathrow, and from which terminal? This sets the Oct 31 hotel choice.</li>
+    <li>One shared room with twin beds, or two rooms? Is $100 a night per room or per person?</li>
+    <li>Is Luke comfortable driving on the left? Does he hold a clean US license held 2+ years?</li>
+    <li>How far can Bill comfortably walk, and can he manage stairs?</li>
+    <li>Any must-sees beyond the town list: whisky distilleries, family or clan history, specific castles?</li>
+    <li>OK to drop the Stirling and Oban car rentals in favor of one car from Inverness?</li>
+  </ol>
+</section>
+
+<section id="sources">
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://www.gov.uk/eta">Get an ETA to visit the UK – GOV.UK</a></li>
+    <li><a href="https://www.heathrow.com/transport-and-directions/by-rail-or-train/kings-cross">Heathrow: getting to King's Cross</a></li>
+    <li><a href="https://www.sme.thetrainline.com/train-times/london-kings-cross-to-york">Trainline: King's Cross to York</a></li>
+    <li><a href="https://onemileatatime.com/uk-e-gates-expanded-countries/">One Mile at a Time: UK eGates open to US citizens</a></li>
+    <li><a href="https://live-departures.info/rail/timetable/York/Edinburgh/">York to Edinburgh timetable</a></li>
+    <li><a href="https://live-departures.info/rail/timetable/Stirling/Aberdeen/">Stirling to Aberdeen timetable</a></li>
+    <li><a href="https://scotrail.co.uk/train-times/aberdeen-to-inverness">ScotRail: Aberdeen to Inverness</a></li>
+    <li><a href="https://www.scotrail.co.uk/train-times/inverness-to-aberdeen">ScotRail: Inverness to Aberdeen</a></li>
+    <li><a href="https://westcoastrailways.co.uk">West Coast Railways: The Jacobite</a></li>
+    <li><a href="https://eathealthy365.com/rules-for-a-car-rental-in-scotland/">Rules for a car rental in Scotland</a></li>
+    <li><a href="https://www.ca.kayak.com/Scottish-Highlands-Car-Rentals.f2001210.crr.html">KAYAK: Scottish Highlands car rentals</a></li>
+    <li><a href="https://www.flightsfrom.com/GLA-LHR">flightsfrom.com: Glasgow to Heathrow flights</a></li>
+    <li><a href="https://www.business.thetrainline.com/train-times/glasgow-to-london-euston">Trainline: Glasgow to London Euston</a></li>
+  </ul>
+  <p class="muted">Drive times, sunset times and weather marked "approx." are general estimates, not looked up.</p>
+</section>
+
+<footer>Framework draft · details to be filled in once flight and lodging are confirmed.</footer>
+</div>
+</body>
+</html>
